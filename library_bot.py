@@ -43,7 +43,7 @@ async def send_echo(message: Message):
             counted_books = Counter(books_name)
             books = []
             for book in books_name:
-                books.append(f'{book} – {counted_books[book]} штук')
+                books.append(f'{book} – {counted_books[book]} шт.')
             books = sorted(list(set(books)))
             await message.reply(text='\n'.join(books))
             await message.reply(text="Хотите ли узнать книги какого-нибудь другого писателя? Просто снова введите одну первую букву фамилии автора и выберите подходящего!")
